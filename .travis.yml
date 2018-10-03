@@ -33,7 +33,7 @@ install:
   - $PIP install cibuildwheel
 
 script:
-  - wget -O- https://files.pythonhosted.org/packages/source/m/mpdaf/mpdaf-$MPDAF_VERSION.tar.gz | tar xf
+  - wget -O- https://files.pythonhosted.org/packages/source/m/mpdaf/mpdaf-$MPDAF_VERSION.tar.gz | tar xz
   - cp build-deps.sh mpdaf-$MPDAF_VERSION/
   - cd mpdaf-$MPDAF_VERSION
   - cibuildwheel --output-dir ../wheelhouse
