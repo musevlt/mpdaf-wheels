@@ -1,5 +1,7 @@
 # Building mpdaf wheels
 
+[![Build Status](https://travis-ci.org/musevlt/mpdaf-wheels.svg?branch=master)](https://travis-ci.org/musevlt/mpdaf-wheels)
+
 This repository builds MacOS and Linux wheels on Travis for
 [mpdaf](https://git-cral.univ-lyon1.fr/MUSE/mpdaf/), using
 [cibuildwheel](https://github.com/joerick/cibuildwheel).
