@@ -16,7 +16,7 @@ env:
           PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/project/cfitsio/lib/pkgconfig
           LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/project/cfitsio/lib'
     - CIBW_ENVIRONMENT_MACOS='CFLAGS="-std=c99"'
-    - CIBW_TEST_REQUIRES='pytest numpy==1.15.1'
+    - CIBW_TEST_REQUIRES='"pytest<3.9" "numpy==1.15.1"'
     - CIBW_TEST_COMMAND='pytest $(dirname $(python -c "import mpdaf; print(mpdaf.__file__)"))'
 
 matrix:
@@ -27,7 +27,7 @@ matrix:
       env: PIP=pip
     - os: osx
       language: generic
-      env: PIP=pip
+      env: PIP=pip3
 
 install:
   - $PIP install cibuildwheel
