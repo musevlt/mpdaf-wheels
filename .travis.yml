@@ -30,7 +30,7 @@ matrix:
       env: PIP=pip3
 
 install:
-  - $PIP install cibuildwheel
+  - $PIP install --user cibuildwheel
 
 script:
   - wget -O- https://files.pythonhosted.org/packages/source/m/mpdaf/mpdaf-$MPDAF_VERSION.tar.gz | tar xz
