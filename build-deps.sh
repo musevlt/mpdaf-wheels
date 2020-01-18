@@ -1,4 +1,5 @@
 #!/bin/bash
+# This file is used to build dependencies, such as cfitsio.
 
 set -e
 
