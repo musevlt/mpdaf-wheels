@@ -3,6 +3,8 @@
 
 set -e
 
+pip install -U Cython
+
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
     brew install cfitsio
     brew info cfitsio
