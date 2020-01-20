@@ -39,6 +39,8 @@ script:
   # timer tests in test_util fails on macos for some obscure reason,
   # so for now let's remove this file
   - rm lib/mpdaf/tools/tests/test_util.py
+  # and force rebuild with cython to fix issue with py3.8
+  - rm lib/mpdaf/obj/merging.c
   - cibuildwheel --output-dir ../wheelhouse
   - cd ..
   - ls wheelhouse
