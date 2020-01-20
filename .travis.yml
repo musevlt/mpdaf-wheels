@@ -17,7 +17,7 @@ env:
           LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/project/cfitsio/lib'
     - CIBW_ENVIRONMENT_MACOS='CFLAGS="-std=c99"'
     - CIBW_TEST_REQUIRES='pytest numpy==1.16.1'
-    - CIBW_TEST_COMMAND='pytest $(dirname $(python -c "import mpdaf; print(mpdaf.__file__)")) --ignore-glob="*test_util.py"'
+    - CIBW_TEST_COMMAND='pytest $(dirname $(python -c "import mpdaf; print(mpdaf.__file__)"))/{drs,MUSE,obj,sdetect}'
 
 matrix:
   include:
