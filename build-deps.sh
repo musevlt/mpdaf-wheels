@@ -3,7 +3,7 @@
 
 set -e
 
-pip install -U Cython
+# pip install -U Cython
 
 echo "# Downloading cfitsio"
 curl -s https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio3370.tar.gz | tar xz
