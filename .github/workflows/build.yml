@@ -49,7 +49,7 @@ jobs:
       - name: Build wheels
         run: |
           cd mpdaf-$MPDAF_VERSION
-          python -m cibuildwheel --output-dir wheelhouse
+          python -m cibuildwheel --output-dir ../wheelhouse
 
       - uses: actions/upload-artifact@v2
         with:
