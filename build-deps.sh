@@ -8,6 +8,6 @@ set -e
 echo "# Downloading cfitsio"
 curl https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-3.49.tar.gz | tar xz
 echo "# Installing cfitsio"
-cd cfitsio
+cd cfitsio-3.49
 ./configure && make clean shared install
 cd ..
