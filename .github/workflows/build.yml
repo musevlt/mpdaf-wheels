@@ -5,7 +5,7 @@ on: [push, pull_request]
 env:
   MPDAF_VERSION: '3.5'
   CIBW_BEFORE_BUILD: 'bash build-deps.sh'
-  CIBW_BUILD: 'cp36-* cp37-* cp38-* cp39-*'
+  CIBW_BUILD: 'cp37-* cp38-* cp39-*'
   CIBW_ARCHS_LINUX: 'x86_64'
   CIBW_BUILD_VERBOSITY: 3
   CIBW_ENVIRONMENT_LINUX: '
@@ -42,11 +42,9 @@ jobs:
         run: |
           wget -O- https://files.pythonhosted.org/packages/source/m/mpdaf/mpdaf-$MPDAF_VERSION.tar.gz | tar xz
           cp build-deps.sh mpdaf-$MPDAF_VERSION/
-          cd mpdaf-$MPDAF_VERSION
-          ls
           # timer tests in test_util fails on macos for some obscure reason,
           # so for now let's remove this file
-          rm lib/mpdaf/tools/tests/test_util.py
+          rm mpdaf-$MPDAF_VERSION/lib/mpdaf/tools/tests/test_util.py
 
       - name: Build wheels
         run: |
