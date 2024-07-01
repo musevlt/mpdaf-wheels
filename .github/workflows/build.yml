@@ -14,7 +14,7 @@ env:
       PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/project/cfitsio-4.4.1/lib/pkgconfig
       LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/project/cfitsio-4.4.1/lib'
   CIBW_ENVIRONMENT_MACOS: 'CFLAGS="-std=c99"'
-  CIBW_TEST_REQUIRES: 'pytest numpy==1.19.5'
+  CIBW_TEST_REQUIRES: 'pytest numpy'
   CIBW_TEST_COMMAND: 'pytest $(dirname $(python -c "import mpdaf; print(mpdaf.__file__)"))'
 
 jobs:
