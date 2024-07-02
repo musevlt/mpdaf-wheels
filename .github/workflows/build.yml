@@ -27,9 +27,9 @@ jobs:
         os: [ubuntu-22.04, macos-10.15]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         name: Install Python
         with:
           python-version: '3.12'
@@ -54,6 +54,6 @@ jobs:
           cd mpdaf-$MPDAF_VERSION
           python -m cibuildwheel --output-dir ../wheelhouse
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           path: ./wheelhouse/*.whl
